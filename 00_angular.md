@@ -25,4 +25,20 @@
         npm -v
 
 3. Install angular CLI
-        npm install -g @angular/cli
+    - execute the below command
+  
+            npm install -g @angular/cli
+
+    - to check angular is installed, execute the below command
+
+            ng version
+
+## create the new project
+    ng new <project_name>
+    ng new 01_demo
+
+    Which stylesheet format would you like to use? (Use arrow keys)
+    >css
+
+    Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) N
+    
