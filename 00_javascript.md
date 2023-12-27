@@ -229,3 +229,170 @@ falsely value
     console.log(a===c); //false
 
 
+## object
+    let person = {name:'Jack', age:29, nationlity:'USA'};
+    console.log(person, typeof person);
+
+    let name = person.name;
+    console.log(name);
+
+    let age = person.age;
+    console.log(age);
+
+    let hairColor = person.hairColor;
+    console.log(hairColor);
+
+    person.hairColor = 'Black';
+    console.log(person);
+
+- to access property , we can use dot operator(.) or bracket([])
+
+        let person = {name:'Jack', age:29, nationlity:'USA'};
+        console.log(person, typeof person);
+
+
+        console.log(person.name);
+        console.log(person['name']);
+
+        let operations = { '+' : 'plus', '-' : 'minus', '*' : 'multiply', '/' : 'divide'};
+        console.log(operations['+']); //can be accessible only with square bracket
+
+- null is an object
+- we can use variable for key and value
+
+        let name = 'jack';
+        let age = '20';
+
+        let person = {'name':name, 'age':age};
+        console.log(person); // { name: 'jack', age: '20' }
+
+        let person1 = {name,age};
+        console.log(person1); // { name: 'jack', age: '20' }
+
+### array
+    let arr = [10,20,30,40];
+    let n = arr.length;
+    console.log(typeof arr);
+
+
+    //iterate the array
+    for(let i=0; i< arr.length; i++){
+    console.log(arr[i]);
+    }
+
+    console.log('-----------------');
+
+    //iterate the array using for of loop
+    for(let a of arr){
+    console.log(a);
+    }
+
+    console.log('-----------------');
+
+    //iterate the array using for of loop
+    arr.forEach(function(x){
+    console.log(x);
+    });
+
+    console.log('-----------------');
+    //iterate the array using for of loop
+    arr.forEach(x=> console.log(x));
+
+#### function of an array
+- push
+
+        let arr = [10,20,30,40];
+        arr.push(100);
+        console.log(arr); //[ 10, 20, 30, 40, 100 ]
+
+- pop
+
+        let arr = [10,20,30,40];
+        arr.pop();
+        console.log(arr); //[ 10, 20, 30];
+
+- indexOf
+
+        let arr = [10,20,30,40,10];
+        console.log(arr.indexOf(30)); //2
+        console.log(arr.indexOf(300)); //-1
+        console.log(arr.indexOf(10)); // 0
+        console.log(arr.indexOf(10,2)); // 5
+
+- filter
+    
+        //array with even number
+        let arr = [1,2,3,4,5];
+        let everArr =[];
+        for(let a of arr){
+        if(a%2 ==0){
+            everArr.push(a)
+        }
+        }
+        console.log(everArr);
+
+        console.log('-----------------');
+
+        let everArr1 = arr.filter(x => x%2==0);
+        console.log(everArr1);
+
+- map
+        //array with square of element
+        let arr = [1,2,3,4,5];
+
+        let squareArr =[];
+        for(let a of arr){
+        squareArr.push(a*a);
+        }
+        console.log(squareArr);
+
+        console.log('-----------------');
+
+        let squareArr1 = arr.map(x => x*x);
+        console.log(squareArr1);
+
+- splice( startingIndex, howManyToRemove, ...elementsToAdd);
+
+        let arr = [10,20,30,40];
+        //delete element 30
+        arr.splice(2, 1);
+        console.log(arr); //[ 10, 20, 40 ]
+
+        //delete element 30,40
+        arr.splice(2, 2);
+        console.log(arr); //[ 10, 20 ]
+
+
+## class based vs prototype based object
+### class based
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        sayHello(){
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        }
+    }
+
+    let p1 = new Person("John",30);
+    let p2 = new Person("Jane",25);
+    p1.sayHello();
+    p2.sayHello();
+
+### prototype based
+    let person1 = 
+    {name:'John',
+    age:30,
+    sayHello:function(){
+                    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+                }
+    };
+
+    person1.sayHello();
+
+
+
+
+
