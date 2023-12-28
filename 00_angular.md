@@ -34,7 +34,7 @@
             ng version
 
 ## create the new project 
-### Angular 17
+### Angular 17 (it will create a standalone project)
     ng new <project_name>
     ng new 01_demo
 
@@ -49,9 +49,9 @@
     >css
     Would you want routing? (y/N) Y
 
-### Angular 17 similar to Angular 16 structure
-    ng new <project_name> --standalone false
-    ng new 02_demo --standalone false
+### Angular 17 similar to Angular 16 structure (preferable)
+    syntax: ng new <project_name> --standalone false
+    eg: ng new 02_demo --standalone false
 
     
     Which stylesheet format would you like to use? (Use arrow keys)
@@ -61,8 +61,10 @@
 
 
 ### run the project
-    cd project_folder
-    npm start
+    syntax: cd project_folder
+    eg: cd 02_demo2
+    npm start 
+    or
     ng serve
 
     ? Would you like to share pseudonymous usage data about this project with the Angular Team
@@ -70,11 +72,11 @@
     details and how to change this setting, see https://angular.io/analytics. (y/N) N
 
 
-### add the bootstrap in the project
+### add the bootstrap in the project 
     cd project_path
-    npm intall bootstrap@3
+    npm install bootstrap@3
 
--   add the path in angular.json file(style property) (line no 37)
+-   add the path in angular.json file(styles property) (line no 37)
 
         "./node_modules/bootstrap/dist/css/bootstrap.min.css",
 
@@ -84,3 +86,23 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
+
+- to learn more about bootstrap
+
+    https://bootstrapdocs.com/v3.0.3/
+
+
+## Component
+    Mostly have four files
+- component-name.component.html
+- component-name.component.ts
+- component-name.component.css
+- component-name.component.spec
+
+### create the component using cli
+    ng generate component <component_name>
+    ng g c <coponent_name>
+
+- if you want to create component without spec file
+  
+        ng g c people --skip-tests
