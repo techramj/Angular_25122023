@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "01_demo": {
+    "02_demo": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/01_demo",
+            "outputPath": "dist/02_demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,6 +35,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "01_demo:build:production"
+              "buildTarget": "02_demo:build:production"
             },
             "development": {
-              "buildTarget": "01_demo:build:development"
+              "buildTarget": "02_demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "01_demo:build"
+            "buildTarget": "02_demo:build"
           }
         },
         "test": {
