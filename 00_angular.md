@@ -106,3 +106,19 @@
 - if you want to create component without spec file
   
         ng g c people --skip-tests
+
+
+## binding
+![binding](./assests/02_binding.png)
+[binding example (ts file)](./99_project/Day_02_binding/app.component.ts)
+[binding example (html file)](./99_project/Day_02_binding/app.component.html)
+
+
+
+## Directive
+    Directives are defined as classes that can add new behavior to the elements in the template or modify existing behavior. The purpose of Directives in Angular is to maneuver the DOM, be it by adding new elements to DOM or removing elements and even changing the appearance of the DOM elements
+
+### Types of directive
+1. component
+2. structural (ngIf, ngFor)
+3. attribute

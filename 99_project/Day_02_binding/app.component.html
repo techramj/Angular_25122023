@@ -1,0 +1,13 @@
+
+<h3>{{title}}</h3>
+<input type="text" name="test" value="{{title}}"> <!--one way binding => string interpolation-->
+
+<button class="btn btn-primary"
+[disabled]="buttonDisabled"   <!--one way binding(property binding) -->
+(click) = "foo('dummy')"   <!--one way binding(event binding) -->
+>Click</button>  
+<hr>
+
+<h3>{{name}}</h3>
+<input type="text" name="name" [(ngModel)]="name">  <!--two way binding  -->
+<router-outlet></router-outlet>

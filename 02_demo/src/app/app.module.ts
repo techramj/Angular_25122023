@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
 import { PeopleComponent } from './people/people.component';
+import { FormsModule } from '@angular/forms';
+import { ServerBlueprintComponent } from './server-blueprint/server-blueprint.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonComponent,
-    PeopleComponent
+    PeopleComponent,
+    ServerBlueprintComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
