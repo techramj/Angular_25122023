@@ -1,19 +1,19 @@
 # Assignment 01
-   create the project: assignment
-   create two component => servers, server
-   ng g c servers
-   ng g c server
+    create the project: assignment
+    create two component => servers, server
+    ng g c servers
+    ng g c server
 
-   servers.component.ts
-   servers{name:string, desc:string}[] =[];
+    servers.component.ts
+    servers{name:string, desc:string}[] =[];
 
     html
     <app-server> with a loop passing the value
 
 
-   server
-   name
-   description
+    server
+    name
+    description
 
 
 # Assignment 02
