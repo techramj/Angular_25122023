@@ -1,0 +1,75 @@
+<div class="container">
+  <h2 [ngClass]="['A','B']">{{title}}</h2>
+
+  <input type="checkbox" [(ngModel)]="show">Show/Hide Color List
+  <div *ngIf="show; else noshowColorTemplate">
+    <h4>My Favourite Color</h4>
+    <ul>
+      <li *ngFor="let c of colors" [ngStyle]="{'color':c}">{{c}}</li>
+    </ul>
+  </div>
+
+  <!-- <div *ngIf="!show">
+    <font color="red">Don't display the color</font>
+  </div> -->
+
+  <ng-template #noshowColorTemplate>
+    <br>
+    <font color="red">Don't display the color</font>
+  </ng-template>
+
+  <div [ngClass]="{'A':show, 'B':hide}">
+    <h3>Select Day</h3>
+    <input type="number" [(ngModel)]="day" min="{{min_val}}"  [max]="max_val">
+    <div [ngSwitch]="day">
+      <div *ngSwitchCase="1">Monday</div>
+      <div *ngSwitchCase="2">Tuesday</div>
+      <div *ngSwitchCase="3">Wednesday</div>
+      <div *ngSwitchCase="4">Thursday</div>
+      <div *ngSwitchCase="5">Friday</div>
+      <div *ngSwitchCase="6">Saturday</div>
+      <div *ngSwitchCase="7">Sunday</div>
+      <div *ngSwitchDefault>I don't know what day it is?</div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="toggleHide()">Toggle Hide</button>
+
+  <div style="padding-top: 20px;">
+    <h1 align="Center">Display Employee Details</h1>
+    Employee: {{employee}}
+    <br>
+    Employee: {{employee | json}}
+
+    <pre>
+      Id              : {{employee.id}}
+      Name            : {{employee.name}}
+      Name|titlecase  : {{employee.name | titlecase}}
+      Name|lowercase  : {{employee.name | lowercase}}
+      Name|uppercase  : {{employee.name | uppercase}}
+
+      Salary          : {{employee.salary}}
+      Salary          : {{employee.salary | number}}
+      Salary          : {{employee.salary | number:'6.2-4'}}
+      Salary          : {{employee.salary | currency}}
+      Salary          : {{employee.salary | currency: 'INR'}}
+
+      Variable        : {{employee.variable}}
+      Variable        : {{employee.variable|percent}}
+
+      City            : {{employee.city}}
+      Mobile          : {{employee.mobile}}
+      Mobile          : XXXXXXXX{{employee.mobile | slice:8:10}}
+
+      PAN             : {{employee.pan}}
+      PAN             : {{employee.pan | uppercase|slice:0:2}}XXXXXX{{employee.pan | uppercase|slice:8:11}}
+
+      Gender          : {{employee.gender}}
+      Married         : {{employee.isMarried}}
+
+    </pre>
+
+  </div>
+
+
+</div>

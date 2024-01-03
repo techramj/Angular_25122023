@@ -1,0 +1,11 @@
+.A{
+  color:violet;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+}
+
+
+.B{
+  border: 5px solid rebeccapurple;
+  background-color: bisque;
+}

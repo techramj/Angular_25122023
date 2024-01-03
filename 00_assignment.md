@@ -6,6 +6,9 @@
 
     servers.component.ts
     servers{name:string, desc:string}[] =[];
+    <div *ngFor="let item of servers">
+        <app-server [name]="item.name"  [desc]="item.desc"></app-server>
+    </div>
 
     html
     <app-server> with a loop passing the value
@@ -18,7 +21,7 @@
 
 # Assignment 02
     In app.component
-    serverOrBluePrint:{name:string, content:string, type:string} = [];
+    serversOrBluePrints:{name:string, content:string, type:string}[] = [];
     type = server or blueprint
 
     In Html, display the panel with the details.

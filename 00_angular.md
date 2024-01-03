@@ -34,6 +34,9 @@
             ng version
 
 ## create the new project 
+    To run the project online
+        https://ng-run.com/
+        
 ### Angular 17 (it will create a standalone project)
     ng new <project_name>
     ng new 01_demo
@@ -120,5 +123,49 @@
 
 ### Types of directive
 1. component
-2. structural (ngIf, ngFor)
-3. attribute
+2. structural (ngIf, ngFor, ngSwitchCase)
+3. attribute (ngStyle, ngClass)
+   - ngStyle
+  
+            [ngStyle] ="{key:value}".
+            key = style-name
+            value = value of style
+   - ngClass
+  
+            [ngClass]="[className]"
+            [ngClass] ="{key:value, key:value}"
+            key = className
+            value = condition
+
+
+
+### @Input()
+    to initialize the property of one component from another component.
+
+
+
+
+### selector
+
+    @Component({
+        selector: 'app-person',
+        templateUrl: './person.component.html',
+        styleUrl: './person.component.css'
+    })
+
+    <app-person></app-person>       element selector
+    <div app-person></div>          attribute selector     
+    <div class='app-person'></div>  class selector
+
+    ng g c selector/element-selector --skip-tests
+    ng g c selector/attibute-selector --skip-tests
+    ng g c selector/class-selector --skip-tests
+
+    <!-- element selector-->
+    <app-element-selector></app-element-selector>
+
+    <!-- attribute selector-->
+    <div app-attribute-selector></div>
+
+    <!-- class selector -->
+    <div class="app-class-selector"></div>
