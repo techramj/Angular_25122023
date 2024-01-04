@@ -1,0 +1,8 @@
+
+
+
+<div *ngFor="let item of data">
+  <p [ngStyle]="{'color':color}">{{item}}</p>
+</div>
+<button class="btn btn-primary" (click)="even()">Even</button>
+<button class="btn btn-danger" (click)="odd()">Odd</button>

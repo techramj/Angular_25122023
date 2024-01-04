@@ -12,6 +12,9 @@ import { ClassSelectorComponent } from './selector/class-selector/class-selector
 import { AttibuteSelectorComponent } from './selector/attibute-selector/attibute-selector.component';
 import { SelectorComponent } from './selector/selector.component';
 import { BasicComponent } from './basic/basic.component';
+import { ServersComponent } from './servers/servers.component';
+import { ServerComponent } from './server/server.component';
+import { EvenOddComponent } from './even-odd/even-odd.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { BasicComponent } from './basic/basic.component';
     AttibuteSelectorComponent,
     SelectorComponent,
     BasicComponent,
+    ServersComponent,
+    ServerComponent,
+    EvenOddComponent,
   ],
   imports: [
     BrowserModule,
