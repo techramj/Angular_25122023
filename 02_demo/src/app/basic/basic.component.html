@@ -67,6 +67,29 @@
       Gender          : {{employee.gender}}
       Married         : {{employee.isMarried}}
 
+      Doj                 : {{employee.doj}}
+      Doj | date          : {{employee.doj | date}}
+      Doj | date:'short'  : {{employee.doj | date:'short'}}
+      Doj | date:'medium' : {{employee.doj | date:'medium'}}
+      Doj | date:'long'   : {{employee.doj | date:'long'}}
+      Doj | date:'full'   : {{employee.doj | date:'full'}}
+
+      Doj | date:'shortDate'  : {{employee.doj | date:'shortDate'}}
+      Doj | date:'mediumDate' : {{employee.doj | date:'mediumDate'}}
+      Doj | date:'longDate'   : {{employee.doj | date:'longDate'}}
+      Doj | date:'fullDate'   : {{employee.doj | date:'fullDate'}}
+
+      Doj | date:'shortTime'  : {{employee.doj | date:'shortTime'}}
+      Doj | date:'mediumTime' : {{employee.doj | date:'mediumTime'}}
+      Doj | date:'longTime'   : {{employee.doj | date:'longTime'}}
+      Doj | date:'fullTime'   : {{employee.doj | date:'fullTime'}}
+
+      Doj | date:'dd-MM-yyyy hh:mm:ss'    : {{employee.doj | date:'dd-MM-yyyy hh:mm:ss'}}
+      Doj | date:'hh:mi:ss'               : {{employee.doj | date:'hh:mi:ss'}}
+
+      <ol>
+        <li *ngFor = "let emp of employee|keyvalue">{{emp.key}} => {{emp.value}}</li>
+      </ol>
     </pre>
 
   </div>

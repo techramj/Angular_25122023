@@ -10,10 +10,7 @@ export class AppComponent {
   desc:string = "";
   color:string = 'black';
 
-  elements:{name:string, desc:string, type:string}[] =[
-    {name:'server1', desc:'test', type:'server'},
-    {name:'server blueprint', desc:'test', type:'blueprint'},
-  ];
+  elements:{name:string, desc:string, type:string}[] =[];
 
 
   onAddServer(){

@@ -1,0 +1,12 @@
+<div class="container">
+  Name: <input type="text" [(ngModel)]="name"><br>
+  Desc: <input type="text" [(ngModel)]="desc" ><br>
+  <button class="btn btn-primary" (click) = "addServer()">Add Server</button>
+
+  <hr>
+
+  <div *ngFor="let item of servers">
+    <app-server [server]="item"></app-server>
+  </div>
+
+</div>

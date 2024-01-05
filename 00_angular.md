@@ -127,15 +127,18 @@
 3. attribute (ngStyle, ngClass)
    - ngStyle
   
-            [ngStyle] ="{key:value}".
+            [ngStyle] ="{key:value}".  
             key = style-name
             value = value of style
+
+            eg: [ngStyle]="{'backgroundColor':'red'} 
+            [ngStyle]="{backgroundColor:color} 
    - ngClass
   
             [ngClass]="[className]"
             [ngClass] ="{key:value, key:value}"
             key = className
-            value = condition
+            value = condition (whether you want to apply)
 
 
 
@@ -169,3 +172,6 @@
 
     <!-- class selector -->
     <div class="app-class-selector"></div>
+
+
+## @Output

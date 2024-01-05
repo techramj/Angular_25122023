@@ -1,0 +1,12 @@
+<div class="container">
+  Name: <input type="text" ><br>
+  Desc: <input type="text" ><br>
+  <button class="btn btn-primary">Add Server</button>
+
+  <hr>
+
+  <div *ngFor="let item of servers">
+    <app-server [name]="item.name" [desc]="item.description"></app-server>
+  </div>
+
+</div>

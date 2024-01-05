@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input ,Output} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Server } from '../model/server.model';
 
 @Component({
@@ -7,12 +7,5 @@ import { Server } from '../model/server.model';
   styleUrl: './server.component.css'
 })
 export class ServerComponent {
-  
-  @Output() buttonClickEvent = new EventEmitter<any>();
-
   @Input() server:Server;
-
-  onButtonClicked(){
-    this.buttonClickEvent.emit();
-  }
 }
