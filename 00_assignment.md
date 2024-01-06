@@ -45,3 +45,29 @@
 
 # Assignment 05
    do the pratice of pipe operator
+
+
+# Assignment 06
+    create three component
+    ng g c banner
+    ng g c button-counter
+    ng g c message
+
+    Banner compoenent (call banner component in app component)
+    -------------------
+    <app-message></app-message>
+    <hr>
+    <app-button-counter></app-button-counter>
+
+
+    ButtonCount component
+    ---------------------------
+    <button></button>
+    button clicked 1 time(s);
+
+    MessageComponent
+    ---------------------
+    if button clicked 5 times then display the message
+    5 => Congratulation, Button clicked 5 times. You are eligible for silver button.
+    10 => Congratulation, Button clicked 10 times. You are eligible for Golden button.
+    20 => Congratulation, Button clicked 20 times. You are eligible for Platinum button.
