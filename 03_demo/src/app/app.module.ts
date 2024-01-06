@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerBlueprintComponent } from './server-blueprint/server-blueprint.component';
+import { ButtonCountComponent } from './button-count/button-count.component';
+import { MessageComponent } from './message/message.component';
+import { BannerComponent } from './banner/banner.component';
+import { CockpitExampleComponent } from './cockpit-example/cockpit-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CockpitComponent,
-    ServerBlueprintComponent
+    ServerBlueprintComponent,
+    ButtonCountComponent,
+    MessageComponent,
+    BannerComponent,
+    CockpitExampleComponent
   ],
   imports: [
     BrowserModule,

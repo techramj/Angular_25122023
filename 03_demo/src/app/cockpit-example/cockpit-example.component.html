@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Server-Cockpit component</h3>
+      </div>
+      <div class="panel-body">
+        <app-cockpit 
+        (onAddServerEvent) = "addServer($event)"
+        (onBlueprintEvent)="addBlueprint($event)"></app-cockpit>
+        <hr>
+        <div *ngFor="let item of elements">
+          <app-server-blueprint [element]="item" [color]="item.type === 'server'?'red':'blue'"></app-server-blueprint>
+        </div>
+      </div>
+    </div>
+  </div>
+  
