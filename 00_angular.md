@@ -175,3 +175,96 @@
 
 
 ## @Output
+
+## local reference
+    The nameing convention of localreference is #variableName
+    <p #para1>
+
+    Example:
+      <div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">Cockpit Component</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-8">
+                    <p>Add new Servers or Bluprints</p>
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" #nameInput >  <!--local reference-->
+                
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control"  #contentInput>
+                    <br>
+                
+                    <button class="btn btn-primary" (click)="onAddServer(nameInput.value, contentInput.value)">Add Server</button>
+                    <button class="btn btn-primary" (click)="onAddBlueprint(nameInput.value, contentInput.value)">Add Server Blueprint</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+## local reference using @ViewChild
+    <div class="col-xs-8">
+              <p>Add new Servers or Bluprints</p>
+              <label for="name">Name</label>
+              <input type="text" class="form-control" #nameInput >
+        
+              <label for="content">Content</label>
+              <input type="text" class="form-control"  #contentInput>
+              <br>
+    <div>
+    
+    import { Component, ElementRef, ViewChild } from '@angular/core';
+
+    export class CockpitComponent {
+
+        @ViewChild('nameInput') nameInput:ElementRef;
+        @ViewChild('contentInput') contentInput:ElementRef;
+
+        onAddServer(){
+            const name = this.nameInput.nativeElement.value;
+            const desc = this.contentInput.nativeElement.value;
+            this.onAddServerEvent.emit({name,desc});
+
+        }
+       
+    }
+
+
+## ngContent
+    greet.component.html
+     <p>Hello<p>
+
+    <app-greet>Jack</app-greet>
+    <app-greet>Sam</app-greet>
+
+    output: 
+       Hello
+       Hello
+
+    
+    greet.component.html
+     <p>Hello<p> <ng-content></ng-content>
+
+    <app-greet>Jack</app-greet>
+    <app-greet>Sam</app-greet>
+
+    output: 
+       Hello Jack
+       Hello Sam
+     
+
+
+
+## lifecycle
+constructor
+1. ngOnChanges  => called after a bound input property changes
+2. ngOnInit => called once the component get initalized
+3. ngDoCheck => called during every change detection run
+4. ngAfterContentInit => 
+5. bgAfterContentChecked =>
+6. ngAfterViewInit =>
+7. ngAfterViewChecked =>
+8. ngOnDestroy => called once the component is about to be destroyed or removed.

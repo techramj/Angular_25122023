@@ -1,14 +1,12 @@
-
-
-<div class="container">
+<div class="container" >
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">Banner Component</h3>
         </div>
         <div class="panel-body">
-            <app-message></app-message>
+            <app-message [messageCount]="count"></app-message>
             <hr>
-            <app-button-count></app-button-count>
+            <app-button-count (countEvent) = "onButtonClicked($event)"></app-button-count>
         </div>
     </div>
 </div>

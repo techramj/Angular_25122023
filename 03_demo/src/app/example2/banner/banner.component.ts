@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
 
+  count:number;
+
+
+  onButtonClicked(val:number){
+    console.log(val);
+    this.count = val;
+  }
 }
