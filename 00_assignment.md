@@ -71,3 +71,29 @@
     5 => Congratulation, Button clicked 5 times. You are eligible for silver button.
     10 => Congratulation, Button clicked 10 times. You are eligible for Golden button.
     20 => Congratulation, Button clicked 20 times. You are eligible for Platinum button.
+
+
+
+# Project Recipe
+![Project Structure](./assests/recipe_project.png)
+
+    ng new recipe-project
+    cd recipe-project
+    npm install bootstrap@3
+
+    add the bootstrap path in angular.json
+
+    ng g c header/header --skip-tests
+
+## Recipe
+
+    ng g c recipes --skip-tests
+    ng g c recipes/recipe-list --skip-tests
+    ng g c recipes/recipe-detail --skip-tests
+    ng g c recipes/recipe-list/recipe-item --skip-tests
+
+## shopping-list
+    ng g c shopping-list --skip-tests
+    ng g c shopping-list/shopping-edit --skip-tests
+
+
