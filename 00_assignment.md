@@ -72,6 +72,9 @@
     10 => Congratulation, Button clicked 10 times. You are eligible for Golden button.
     20 => Congratulation, Button clicked 20 times. You are eligible for Platinum button.
 
+# Assignment 07
+    practice  the lifecycle 
+    
 
 
 # Project Recipe
