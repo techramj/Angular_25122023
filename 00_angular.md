@@ -268,3 +268,11 @@ constructor
 6. ngAfterViewInit =>
 7. ngAfterViewChecked =>
 8. ngOnDestroy => called once the component is about to be destroyed or removed.
+
+
+# Routing: 
+    In a single-page app, you change what the user sees by showing or hiding portions of the display that correspond to particular components, rather than going out to the server to get a new page. As users perform application tasks, they need to move between the different views that you have defined.
+
+    To handle the navigation from one view to the next, we use the Angular Router.
+
+

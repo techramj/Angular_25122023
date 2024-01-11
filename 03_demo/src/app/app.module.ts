@@ -20,6 +20,10 @@ import { Comp4Component } from './service-example2/comp4/comp4.component';
 import { Comp5Component } from './service-example2/comp5/comp5.component';
 import { ServiceExample2Component } from './service-example2/service-example2.component';
 import { Comp6Component } from './service-example2/comp6/comp6.component';
+import { LogDashboardComponent } from './log-dashboard/log-dashboard.component';
+import { LogService } from './log.service';
+import { HeaderComponent } from './header/header.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -38,14 +42,17 @@ import { Comp6Component } from './service-example2/comp6/comp6.component';
     Comp4Component,
     Comp5Component,
     ServiceExample2Component,
-    Comp6Component
+    Comp6Component,
+    LogDashboardComponent,
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
