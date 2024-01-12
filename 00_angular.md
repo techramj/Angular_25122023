@@ -311,4 +311,25 @@ constructor
 
     To handle the navigation from one view to the next, we use the Angular Router.
 
+## path param/path variable
+     app-routing.moduele.ts
+        {path:'emp/:name', component:any component}
+    
+     name is the path vaiable
+
+### read path variable
+    inject ActivatedRoute
+    constructor(private route:ActivatedRoute){}
+
+    this.route.snapshot.paramMap.get('name');
+
+## navigate programatically
+   inject Router
+   constructor(private router:Router){}
+
+   this.router.navigateByUrl(path);
+
+    
+
+
 
