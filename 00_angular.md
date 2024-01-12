@@ -270,6 +270,42 @@ constructor
 8. ngOnDestroy => called once the component is about to be destroyed or removed.
 
 
+# Service
+    To share the data/logic between the component => @Input/@Output
+    Another option is service.
+
+    Service is the class used to separate the logic from view.
+    
+
+## cli command
+    ng g s service-name
+    ng g s service-name --skip-tests
+
+## way to declare or use the service
+1. @Injectable
+
+        @Injectable({
+            providedIn: 'root'
+        })
+
+
+2. @NgModule --lazy binding
+
+    [ngModule](./03_demo/src/app/app.module.ts)
+
+        refer to LogService
+
+
+3. @Component
+
+        @Component({
+        selector: 'app-service-example2',
+        templateUrl: './service-example2.component.html',
+        styleUrl: './service-example2.component.css',
+        providers: [Example2Service]
+        })
+
+
 # Routing: 
     In a single-page app, you change what the user sees by showing or hiding portions of the display that correspond to particular components, rather than going out to the server to get a new page. As users perform application tasks, they need to move between the different views that you have defined.
 

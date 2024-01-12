@@ -24,6 +24,9 @@ import { LogDashboardComponent } from './log-dashboard/log-dashboard.component';
 import { LogService } from './log.service';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { EmpNotFoundComponent } from './emp-not-found/emp-not-found.component';
+import { QueryParamExampleComponent } from './query-param-example/query-param-example.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     Comp6Component,
     LogDashboardComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EmployeesComponent,
+    EmpNotFoundComponent,
+    QueryParamExampleComponent
   ],
   imports: [
     BrowserModule,
