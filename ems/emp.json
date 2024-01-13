@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John",
+      "email": "john@test.com",
+      "salary": 5000
+    },
+    {
+      "id": "2",
+      "name": "Jack",
+      "email": "jack@test.com",
+      "salary": 2000
+    },
+    {
+      "id": "3",
+      "name": "Jessica",
+      "email": "jessica@test.com",
+      "salary": 3000
+    },
+    {
+      "id": "4",
+      "name": "Sam",
+      "email": "sam@test.com",
+      "salary": 4000
+    },
+    {
+      "id": "5",
+      "name": "Vedant",
+      "email": "vedant@test.com",
+      "salary": 15000
+    },
+    {
+      "id": "6",
+      "name": "Abhi",
+      "email": "abhi@test.com",
+      "salary": 20000
+    },
+    {
+      "id": "7",
+      "name": "Abhi",
+      "email": "abhi@test.com",
+      "salary": 20000
+    },
+    {
+      "id": "f2fd",
+      "name": "Abhi",
+      "email": "abhi@test.com",
+      "salary": 20000
+    }
+  ]
+}

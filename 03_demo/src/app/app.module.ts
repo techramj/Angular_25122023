@@ -27,6 +27,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { EmployeesComponent } from './employees/employees.component';
 import { EmpNotFoundComponent } from './emp-not-found/emp-not-found.component';
 import { QueryParamExampleComponent } from './query-param-example/query-param-example.component';
+import { ObservableOneComponent } from './observable/observable-one/observable-one.component';
+import { ObservableTwoComponent } from './observable/observable-two/observable-two.component';
+import { ObservableThreeComponent } from './observable/observable-three/observable-three.component';
+import { ObservableFourComponent } from './observable/observable-four/observable-four.component';
+import { Promise01Component } from './promise/promise-01/promise-01.component';
+import { Promise02Component } from './promise/promise-02/promise-02.component';
 
 
 @NgModule({
@@ -51,7 +57,13 @@ import { QueryParamExampleComponent } from './query-param-example/query-param-ex
     PageNotFoundComponent,
     EmployeesComponent,
     EmpNotFoundComponent,
-    QueryParamExampleComponent
+    QueryParamExampleComponent,
+    ObservableOneComponent,
+    ObservableTwoComponent,
+    ObservableThreeComponent,
+    ObservableFourComponent,
+    Promise01Component,
+    Promise02Component
   ],
   imports: [
     BrowserModule,

@@ -331,5 +331,59 @@ constructor
 
     
 
+# Observable vs Promise
+    Promise is a feature of JS but Observabale is the feature of rxjs lib.
+    promise is eager loaded but Observable is lazy loaded.
+    promise can return only one times vs observable can return multiple times.
+        promise resolve in the first call but observable next can be done multiple time.
 
 
+
+
+# Rest Api
+## http method
+    get  => fetch (idompotent)
+    post => add/create
+    put  => update (idompotent)
+    delete => delete (idompotent)
+
+
+    http://youtube.com/watch?video1 => bookmark is possible
+
+
+    http://youtube.com/watch => => bookmark is not possible
+
+    body
+     video1
+
+## create the server to expost rest api
+
+### step 1: create the folder
+    eg: ems
+    mkdir ems
+
+    cd ems
+
+### step 2: initalize the folder is node
+    npm init -y
+    note: must be inside the folder
+
+### step 3: create the json file
+    eg: emp.json
+
+### step 4: add the dummy data
+    {
+        "employees":[
+            {"id":1, "name":"John","email":"john@test.com","salary": 5000},
+            {"id":2,"name":"Jack","email":"jack@test.com", "salary": 2000},
+            {"id":3, "name":"Jessica","email":"jessica@test.com", "salary": 3000 },
+            {"id":4, "name":"Sam", "email":"sam@test.com", "salary": 4000},
+            {"id":5,"name":"Vedant","email":"vedant@test.com","salary": 15000 }
+        ]
+    }
+
+
+### step 5: execute the below command
+    npm install -g json-server
+
+### Step 6: add the below command in package.json 
