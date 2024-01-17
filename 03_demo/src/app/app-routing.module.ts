@@ -13,6 +13,9 @@ import { ObservableThreeComponent } from './observable/observable-three/observab
 import { ObservableFourComponent } from './observable/observable-four/observable-four.component';
 import { Promise01Component } from './promise/promise-01/promise-01.component';
 import { Promise02Component } from './promise/promise-02/promise-02.component';
+import { EmpListComponent } from './emp-list/emp-list.component';
+import { EmpCreateComponent } from './emp-create/emp-create.component';
+import { EmpEditComponent } from './emp-edit/emp-edit.component';
 
 const routes: Routes = [
   {path:'dashboard', component:LogDashboardComponent},
@@ -27,6 +30,9 @@ const routes: Routes = [
   {path: 'observable4', component: ObservableFourComponent},
   {path: 'promise1', component:Promise01Component},
   {path: 'promise2', component:Promise02Component},
+  {path: 'emp-list', component:EmpListComponent},
+  {path: 'emp-create', component:EmpCreateComponent},
+  {path:'emp-edit/:id', component:EmpEditComponent},
   {path:'', redirectTo:'dashboard', pathMatch:'full'},
   {path:'**', component: PageNotFoundComponent}
 ];

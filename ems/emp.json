@@ -7,46 +7,34 @@
       "salary": 5000
     },
     {
-      "id": "2",
-      "name": "Jack",
-      "email": "jack@test.com",
-      "salary": 2000
-    },
-    {
       "id": "3",
       "name": "Jessica",
       "email": "jessica@test.com",
       "salary": 3000
     },
     {
-      "id": "4",
-      "name": "Sam",
-      "email": "sam@test.com",
-      "salary": 4000
-    },
-    {
       "id": "5",
       "name": "Vedant",
-      "email": "vedant@test.com",
-      "salary": 15000
+      "email": "vedant@gmail.com",
+      "salary": 30000
     },
     {
-      "id": "6",
-      "name": "Abhi",
-      "email": "abhi@test.com",
-      "salary": 20000
+      "id": "9a09",
+      "name": "Sam",
+      "email": "sam@test1.com",
+      "salary": 50000
     },
     {
-      "id": "7",
-      "name": "Abhi",
-      "email": "abhi@test.com",
-      "salary": 20000
+      "id": "7c49",
+      "name": "Sameer",
+      "email": "sam@test1.com",
+      "salary": "1234"
     },
     {
-      "id": "f2fd",
-      "name": "Abhi",
-      "email": "abhi@test.com",
-      "salary": 20000
+      "id": "0874",
+      "name": "Aditya",
+      "email": "aadi@test.com",
+      "salary": "5555"
     }
   ]
 }

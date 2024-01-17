@@ -21,7 +21,7 @@ export class EmployeesComponent implements OnInit {
     console.log(this.route.snapshot.paramMap);
     let name = this.route.snapshot.paramMap.get('name');
     console.log(name);
-    this.employees = this.empService.getEmployeesByName(name);
+    //this.employees = this.empService.getEmployeesByName(name);
     if(this.employees.length == 0){
       //navigate to employee not found
       console.log("redirecting to emp not found");

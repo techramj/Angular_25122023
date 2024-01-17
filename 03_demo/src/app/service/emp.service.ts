@@ -1,30 +1,49 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../model/employee';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmpService {
 
-  employees:Employee[] = [
-    {id:1, name:'Sam', salary:1000},
-    {id:2, name:'Jack', salary:2000},
-    {id:3, name:'Mohan', salary:9000},
-    {id:4, name:'Ashwin', salary:10000},
-    {id:5, name:'Jack', salary:10000},
-  ];
+  //url:string = 'http://localhost:3000/employees';
+  url:string = "http://localhost:8080/employees";
 
-  constructor() { }
+  employees:Employee[] = [];
 
-  getEmployees(): Employee[]{
-    return this.employees;
+  httpOption = {
+    headers: new HttpHeaders({
+      'Content-Type' : 'application/json'
+    })
+  };
+
+  constructor(private http:HttpClient) {
+   }
+
+  getEmployees(): Observable<Employee[]>{
+    return this.http.get<Employee[]>(this.url);
   }
 
-  getEmployeeById(id:number) : Employee{
-    return this.employees.filter(e=>e.id==id)[0];
+  deleteEmployee(id:any) : Observable<any>{
+    return this.http.delete(this.url+"/"+id);
   }
 
-  getEmployeesByName(name:any) : Employee[]{
-    return this.employees.filter(e=>e.name == name);
+  addEmployee(emp:any):Observable<Employee>{
+    return this.http.post<Employee>(this.url, JSON.stringify(emp), this.httpOption);
+  }
+
+  getEmployeeById(id:any) : Observable<Employee> {
+    //return this.employees.filter(e=>e.id==id)[0];
+    return this.http.get<Employee>(this.url+"/"+id);
+  }
+
+  updateEmployee(id:any, emp:any) : Observable<Employee>{
+    return this.http.put<Employee>(this.url+"/"+id, JSON.stringify(emp), this.httpOption);
+  }
+
+  getEmployeesByName(name:any) {
+    //return this.employees.filter(e=>e.name == name);
   }
 }

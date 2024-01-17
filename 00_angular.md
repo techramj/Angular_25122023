@@ -387,3 +387,10 @@ constructor
     npm install -g json-server
 
 ### Step 6: add the below command in package.json 
+     "start" : "npx json-server --watch emp.json"
+
+### start the ems server
+    npm start
+
+### instal postman
+    https://www.postman.com/downloads/
